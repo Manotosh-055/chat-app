@@ -9,11 +9,11 @@ const chatRouter = require('./routes/chatRoute');
 const messageRouter = require('./routes/messageRoute');
 const { notFound, errorHandler } = require('./middleware/errorMiddleware');
 app.use(cors());
-// app.use(function (req, res, next) {
-//     res.header("Access-Control-Allow-Origin", "*");
-//     res.header("Access-Control-Allow-Headers", "X-Requested-With");
-//     next();
-// });
+app.use(function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    next();
+});
 const DATABASE_URL = process.env.MONGO_URI;
 connectDB(DATABASE_URL);
 app.use(express.json());
