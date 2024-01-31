@@ -55,7 +55,7 @@ const Signup = () => {
         },
       };
       const { data } = await axios.post(
-        "https://chat-app-backend-indol-chi.vercel.app/api/user/register",
+        "/api/user/register",
         {
           name,
           email,

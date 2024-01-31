@@ -11,7 +11,7 @@ import io from "socket.io-client";
 import Lottie from "react-lottie";
 import animationData from "../animations/typing.json";
 
-const ENDPOINT = "https://chat-app-backend-indol-chi.vercel.app";
+const ENDPOINT = "http://localhost:5000";
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
@@ -46,7 +46,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
       setLoading(true);
 
       const { data } = await axios.get(
-        `https://chat-app-backend-indol-chi.vercel.app/api/message/user-msg/${selectedChat?._id}`,
+        `/api/message/user-msg/${selectedChat?._id}`,
         config
       );
       //console.log(messages);
@@ -78,7 +78,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         };
         setNewMessage("");
         const { data } = await axios.post(
-          "https://chat-app-backend-indol-chi.vercel.app/api/message/create-message",
+          "/api/message/create-message",
           {
             content: newMessage,
             chatId: selectedChat?._id,

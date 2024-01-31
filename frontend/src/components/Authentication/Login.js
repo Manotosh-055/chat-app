@@ -39,7 +39,7 @@ const Login = () => {
         },
       };
       const { data } = await axios.post(
-        "https://chat-app-backend-indol-chi.vercel.app/api/user/login",
+        "/api/user/login",
         {
           email,
           password
