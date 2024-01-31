@@ -57,7 +57,7 @@ const SideDrawer = () => {
                 },
             };
 
-            const { data } = await axios.get(`/api/user/all-user?search=${search}`, config);
+            const { data } = await axios.get(`https://chat-app-backend-indol-chi.vercel.app/api/user/all-user?search=${search}`, config);
             setLoading(false);
             setSearchResult(data);
         } catch (error) {
@@ -85,7 +85,7 @@ const SideDrawer = () => {
                     Authorization: `Bearer ${user.token}`,
                 },
             };
-            const { data } = await axios.post(`/api/chat/access-chat`, { userId }, config);
+            const { data } = await axios.post(`https://chat-app-backend-indol-chi.vercel.app/api/chat/access-chat`, { userId }, config);
 
             if (!chats.find((c) => c._id === data._id)) setChats([data, ...chats]);
             setSelectedChat(data);

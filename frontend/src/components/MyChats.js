@@ -23,7 +23,7 @@ const MyChats = ({fetchAgain}) => {
         },
       };
 
-      const { data } = await axios.get("/api/chat/fetch-chat", config);
+      const { data } = await axios.get("https://chat-app-backend-indol-chi.vercel.app/api/chat/fetch-chat", config);
       //console.log(data);
       setChats(data);
     } catch (error) {

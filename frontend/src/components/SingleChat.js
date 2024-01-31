@@ -46,7 +46,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
       setLoading(true);
 
       const { data } = await axios.get(
-        `/api/message/user-msg/${selectedChat?._id}`,
+        `https://chat-app-backend-indol-chi.vercel.app/api/message/user-msg/${selectedChat?._id}`,
         config
       );
       //console.log(messages);
@@ -78,7 +78,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         };
         setNewMessage("");
         const { data } = await axios.post(
-          "/api/message/create-message",
+          "https://chat-app-backend-indol-chi.vercel.app/api/message/create-message",
           {
             content: newMessage,
             chatId: selectedChat?._id,
