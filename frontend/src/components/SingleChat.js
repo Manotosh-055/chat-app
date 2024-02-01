@@ -251,7 +251,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         ) : (
           <Box display="flex" alignItems="center" justifyContent="center" h="100%">
             <Text fontSize="3xl" pb={3} fontFamily="Work sans">
-              Click on a user to start conversation
+              New? Click on search to start conversation
             </Text>
           </Box>
         )
