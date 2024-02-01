@@ -14,6 +14,7 @@ This is a chat application built with React JS, Node JS, Express JS, and MongoDB
 
 git clone https://github.com/Manotosh-055/chat-app.git
 
+Then git checkout local
 
 ## Navigate to the Project Directory
 
