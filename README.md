@@ -14,13 +14,17 @@ This is a chat application built with React JS, Node JS, Express JS, and MongoDB
 
 git clone https://github.com/Manotosh-055/chat-app.git
 
-Then git checkout local
+git checkout local  
 
 ## Navigate to the Project Directory
 
-cd chat_app
+Make a chat_app folder and then copy both frontend and backend folder to this chat_app
+
+open chat_app folder
 
 ## Install Dependencies
+
+cd backend
 
 npm install
 
@@ -29,6 +33,8 @@ cd frontend
 npm install
 
 ## Start the Server
+
+npm backend
 
 npm run start
 
